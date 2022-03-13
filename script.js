@@ -117,7 +117,7 @@ const colors = {
   3: "pink",
   4: "green",
   5: "brown",
-  6: "brown"
+  6: "blue"
 }
 
 function lightButton(btn){
