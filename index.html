@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    
+    
+  </head>
+  <body>
+    <h1>Daft Punk Memory Game</h1>
+    
+    <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/IMG_10532.png?v=1647211777654" width="400" height="400">    
+    <p>
+      Welcome to the game! Repeat back the pattern by pressing buttons.
+    </p>
+    <button id="startBtn" onclick="startGame()">Start</button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+    
+    <p id="mistakeStatus">Mistakes: 0</p>
+    
+    <!-- define audio sources for button press -->
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/hitsound_vortex1.wav?v=1646708262267" id="workIt"></audio>
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/hitsound_vortex2.wav?v=1646708262399" id="makeIt"></audio>
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/hitsound_vortex3.wav?v=1646708262434" id="doIt"></audio>
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/hitsound_vortex4.wav?v=1646708262643" id="makesUs"></audio>
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/hitsound_vortex5.wav?v=1646708262600" id="harder"></audio>
+    <audio src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/better.wav?v=1646708255846" id="better"></audio>
+    
+    <div id="gameButtonArea">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/purpleoff.png?v=1646787262325" id="purpleoff" width="150" height="150" onmousedown="guess(1);playMyAudio(1)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/purpleon.png?v=1646787262325" id="purpleon" width="150" height="150" >
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/redup.png?v=1646787262325" id="redoff" width="150" height="150" onmousedown="guess(2);playMyAudio(2)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/reddown.png?v=1646787262476" id="redon" width="150" height="150" >
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/pinkoff.png?v=1646787262325" id="pinkoff" width="150" height="150" onmousedown="guess(3);playMyAudio(3)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/pinkon.png?v=1646787262325" id="pinkon" width="150" height="150" >
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/greenoff.png?v=1646787262325" id="greenoff" width="150" height="150" onmousedown="guess(4);playMyAudio(4)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/greenon.png?v=1646787262442" id="greenon" width="150" height="150" >
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/brownoff.png?v=1646787262515" id="brownoff" width="150" height="150" onmousedown="guess(5);playMyAudio(5)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/brownon.png?v=1646787262459" id="brownon" width="150" height="150" >
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/blueoff.png?v=1646787262325" id="blueoff" width="150" height="150" onmousedown="guess(6);playMyAudio(6)">
+      <img src="https://cdn.glitch.global/9a6227fa-05f8-43ef-a53d-51da876aa4ac/blueon.png?v=1646787262497" id="blueon" width="150" height="150" >
+
+    </div>
+  </body>
+    
+</html>
